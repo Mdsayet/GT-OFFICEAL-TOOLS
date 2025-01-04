@@ -55,7 +55,7 @@ body {
     }
 }
 
-/* Welcome Message */
+/* Welcome Message with Border */
 .welcome {
     font-size: 3em;
     color: black;
@@ -63,22 +63,9 @@ body {
     font-weight: bold;
     letter-spacing: 2px;
     padding: 10px;
-    border: 5px solid transparent;
-    background: linear-gradient(45deg, red, green, blue);
-    background-clip: border-box;
-    animation: colorShift 3s infinite ease-in-out;
-}
-
-@keyframes colorShift {
-    0% {
-        background: linear-gradient(45deg, red, green, blue);
-    }
-    50% {
-        background: linear-gradient(45deg, yellow, purple, cyan);
-    }
-    100% {
-        background: linear-gradient(45deg, red, green, blue);
-    }
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: #f4f4f4;
 }
 
 /* Subtitle */
@@ -97,13 +84,14 @@ body {
     width: 90%;
 }
 
-/* Buttons */
+/* Buttons with Platform Logos */
 .button-container {
     margin-top: 30px;
 }
 
 .button {
-    display: block;
+    display: flex;
+    align-items: center;
     background-color: red;
     color: black;
     border: 2px solid black;
@@ -114,7 +102,7 @@ body {
     border-radius: 30px;
     text-align: center;
     width: 80%;
-    max-width: 200px;
+    max-width: 250px;
     transition: all 0.3s ease-in-out;
     font-weight: bold;
 }
@@ -122,6 +110,26 @@ body {
 .button:hover {
     background-color: darkred;
     color: white;
+}
+
+/* Platform Logo Styling */
+.platform-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+/* Specific Button Color */
+.youtube {
+    background-color: #ff0000;
+}
+
+.telegram {
+    background-color: #0088cc;
+}
+
+.whatsapp {
+    background-color: #25d366;
 }
 
 /* Responsive */
