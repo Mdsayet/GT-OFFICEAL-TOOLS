@@ -34,97 +34,6 @@
             };
         };
     </script>
-    <style>
-        /* পপআপ স্টাইল */
-        #popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8); /* কালো ব্যাকগ্রাউন্ড */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .popup-content {
-            background: linear-gradient(135deg, #ff6f61, #ffcc00); /* গ্র্যাডিয়েন্ট ব্যাকগ্রাউন্ড */
-            padding: 25px;
-            border-radius: 20px;
-            text-align: center;
-            width: 80%;
-            max-width: 500px;
-            color: #fff;
-            font-family: 'Arial', sans-serif;
-            font-size: 20px;
-            line-height: 1.8;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* শ্যাডো এফেক্ট */
-        }
-
-        .popup-content p {
-            font-size: 22px;  /* বার্তা বড় করার জন্য */
-        }
-
-        .popup-content ol {
-            text-align: left;
-            margin-left: 20px;
-            font-size: 20px;
-        }
-
-        #closePopup {
-            margin-top: 20px;
-            padding: 12px 30px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 20px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        #closePopup:disabled {
-            background-color: #d3d3d3;  /* নিষ্ক্রিয় বাটনের জন্য */
-            cursor: not-allowed;
-        }
-
-        #closePopup:hover {
-            background-color: #45a049;
-        }
-
-        /* টাইমার টেক্সট */
-        #timerDisplay {
-            margin-top: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            color: #fff;
-            border: 4px solid #fff; /* টাইমারের চারপাশে বর্ডার */
-            padding: 10px;
-            border-radius: 12px;
-            width: 70px;
-            margin: 20px auto;
-        }
-
-        /* পপআপ এনিমেশন */
-        .popup-animation {
-            animation: fadeIn 0.6s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-    </style>
 </head>
 <body>
     <div id="popup" class="popup">
@@ -134,13 +43,11 @@
             <ol>
                 <li>টেলিগ্রামে জয়েন্ট হতে হবে</li>
                 <li>টেলিগ্রামে আমরা প্যানেল কিভাবে সেট আপ করতে হয় সে ভিডিওর লিংক দিয়ে দিব</li>
-                <li>আপনার সে ভিডিওটি দেখে ডাউনলোড করে গেম খেলতে পারবেন</li>
             </ol>
             <div id="timerDisplay">10</div> <!-- শুধুমাত্র সেকেন্ড দেখানো হবে -->
             <button id="closePopup" disabled>ওকে</button>
         </div>
     </div>
-
     <div class="container">
         <!-- Company Logo Section -->
         <div class="logo-container">
@@ -161,9 +68,6 @@
             </a>
             <a href="https://youtube.com/@g_tools_official?si=a_nRq-tUnd53B0Mt" class="button YOUTUBE">
                 YOUTUBE
-            </a>
-            <a href="https://whatsapp.com/channel/0029VafxwdD72WU3acE7oV2q" class="button whatsapp">
-                WHATSAPP
             </a>
         </div>
 
