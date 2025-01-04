@@ -1,92 +1,3 @@
-/* পপআপ স্টাইল */
-#popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* কালো ব্যাকগ্রাউন্ড */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.popup-content {
-    background: linear-gradient(135deg, #ff6f61, #ffcc00); /* গ্র্যাডিয়েন্ট ব্যাকগ্রাউন্ড */
-    padding: 25px;
-    border-radius: 20px;
-    text-align: center;
-    width: 80%;
-    max-width: 500px;
-    color: #fff;
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
-    line-height: 1.8;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* শ্যাডো এফেক্ট */
-}
-
-.popup-content p {
-    font-size: 22px;  /* বার্তা বড় করার জন্য */
-}
-
-.popup-content ol {
-    text-align: left;
-    margin-left: 20px;
-    font-size: 20px;
-}
-
-#closePopup {
-    margin-top: 20px;
-    padding: 12px 30px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-#closePopup:disabled {
-    background-color: #d3d3d3;  /* নিষ্ক্রিয় বাটনের জন্য */
-    cursor: not-allowed;
-}
-
-#closePopup:hover {
-    background-color: #45a049;
-}
-/* টাইমার টেক্সট */
-#timerDisplay {
-    margin-top: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    border: 4px solid #fff; /* টাইমারের চারপাশে বর্ডার */
-    padding: 10px;
-    border-radius: 12px;
-    width: 70px;
-    margin: 20px auto;
-}
-
-/* পপআপ এনিমেশন */
-.popup-animation {
-    animation: fadeIn 0.6s ease-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 /* Body Styling */
 body {
     margin: 0;
@@ -110,18 +21,20 @@ body {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Company Logo Styling */
 .logo-container {
     text-align: center;
     margin-bottom: 20px;
 }
 
 .logo {
-    width: 150px;
+    width: 150px; /* Set the logo size */
     height: 150px;
-    border: 5px solid black;
-    border-radius: 10px;
+    border: 5px solid black; /* Border around the logo */
+    border-radius: 10px; /* Optional: rounded corners */
 }
 
+/* Welcome Message */
 .welcome {
     font-size: 3em;
     color: black;
@@ -165,17 +78,14 @@ body {
     max-width: 200px;
     transition: all 0.3s ease-in-out;
     font-weight: bold;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* সেডো */
 }
 
 .button:hover {
     background-color: darkred;
     color: white;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* সেডো শ্যাডো */
 }
 
+/* Phone Button */
 .phone-button {
     display: block;
     background-color: green;
@@ -195,8 +105,6 @@ body {
 
 .phone-button:hover {
     background-color: darkgreen;
-    transform: scale(1.1);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive */
