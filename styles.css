@@ -1,65 +1,77 @@
+/* Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    text-align: center;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-h1 {
-    font-size: 3em;
-    color: #2c3e50;
-    margin: 20px 0;
+/* Container */
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    border: 5px solid black;
+    padding: 20px;
+    background-color: white;
 }
 
-.welcome-container {
-    padding: 50px;
+/* Welcome Message */
+.welcome {
+    font-size: 2.5em;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 0;
 }
 
-.birds-animation {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
+.subtitle {
+    font-size: 1.5em;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* Divider Line */
+.divider {
+    height: 2px;
+    background-color: black;
     margin: 20px auto;
+    width: 90%;
 }
 
-.bird {
-    width: 50px;
-    position: absolute;
-    animation: fly 5s infinite linear;
-}
-
-@keyframes fly {
-    from {
-        transform: translate(-100px, 0);
-    }
-    to {
-        transform: translate(100vw, -100px);
-    }
-}
-
-p {
-    font-size: 1.2em;
-    color: #34495e;
-    margin: 20px 0;
-}
-
-.buttons {
+/* Buttons */
+.button-container {
     margin-top: 20px;
 }
 
-.btn {
+.button {
     display: inline-block;
-    background-color: #3498db;
-    color: white;
+    background-color: red;
+    color: black;
+    border: 2px solid black;
+    text-decoration: none;
     padding: 10px 20px;
     margin: 10px;
+    font-size: 1.2em;
     border-radius: 5px;
-    text-decoration: none;
-    font-size: 1em;
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #2980b9;
+.button:hover {
+    background-color: darkred;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .welcome {
+        font-size: 2em;
+    }
+    .button {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
 }
