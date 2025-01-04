@@ -1,8 +1,65 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
     text-align: center;
-    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
+
 h1 {
-    color: #333;
+    font-size: 3em;
+    color: #2c3e50;
+    margin: 20px 0;
+}
+
+.welcome-container {
+    padding: 50px;
+}
+
+.birds-animation {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.bird {
+    width: 50px;
+    position: absolute;
+    animation: fly 5s infinite linear;
+}
+
+@keyframes fly {
+    from {
+        transform: translate(-100px, 0);
+    }
+    to {
+        transform: translate(100vw, -100px);
+    }
+}
+
+p {
+    font-size: 1.2em;
+    color: #34495e;
+    margin: 20px 0;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
 }
