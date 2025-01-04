@@ -23,15 +23,14 @@
 
                 if (timer <= 0) {
                     clearInterval(countdown); // টাইমার বন্ধ করা
-                    closePopupButton.disabled = true; // "ওকে" বাটন নিষ্ক্রিয় করা
-                    closePopupButton.textContent = "টাইম আউট"; // "ওকে" বাটনের টেক্সট পরিবর্তন করা
+                    closePopupButton.disabled = false; // "ওকে" বাটন কাজ করবে
+                    closePopupButton.textContent = "ওকে"; // "ওকে" বাটনের টেক্সট পরিবর্তন করা
                 }
             }, 1000);
 
             // ওকে বাটন ক্লিক করলে পপআপ বন্ধ হবে
             closePopupButton.onclick = function() {
-                clearInterval(countdown); // টাইমার বন্ধ করা
-                popup.style.display = 'none';
+                popup.style.display = 'none'; // পপআপটি সরে যাবে
             };
         };
     </script>
@@ -133,7 +132,7 @@
                 <li>আপনার সে ভিডিওটি দেখে ডাউনলোড করে গেম খেলতে পারবেন</li>
             </ol>
             <div id="timerDisplay">পপআপ বন্ধ হবে 10 সেকেন্ডে।</div>
-            <button id="closePopup">ওকে</button>
+            <button id="closePopup" disabled>ওকে</button>
         </div>
     </div>
 
