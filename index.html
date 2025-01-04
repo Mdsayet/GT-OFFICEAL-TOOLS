@@ -12,8 +12,25 @@
             popup.style.display = 'flex';
             popup.classList.add('popup-animation');  // এনিমেশন ক্লাস যোগ করা
 
+            var closePopupButton = document.getElementById('closePopup');
+            var timer = 10; // ১০ সেকেন্ডের টাইমার
+            var timerDisplay = document.getElementById('timerDisplay');
+            
+            // টাইমার শুরু করা
+            var countdown = setInterval(function() {
+                timer--;
+                timerDisplay.textContent = "পপআপ বন্ধ হবে " + timer + " সেকেন্ডে।";
+
+                if (timer <= 0) {
+                    clearInterval(countdown); // টাইমার বন্ধ করা
+                    closePopupButton.disabled = true; // "ওকে" বাটন নিষ্ক্রিয় করা
+                    closePopupButton.textContent = "টাইম আউট"; // "ওকে" বাটনের টেক্সট পরিবর্তন করা
+                }
+            }, 1000);
+
             // ওকে বাটন ক্লিক করলে পপআপ বন্ধ হবে
-            document.getElementById('closePopup').onclick = function() {
+            closePopupButton.onclick = function() {
+                clearInterval(countdown); // টাইমার বন্ধ করা
                 popup.style.display = 'none';
             };
         };
@@ -43,19 +60,19 @@
             max-width: 500px;
             color: #fff;
             font-family: 'Arial', sans-serif;
-            font-size: 18px;
-            line-height: 1.6;
+            font-size: 20px;
+            line-height: 1.8;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* শ্যাডো এফেক্ট */
         }
 
         .popup-content p {
-            font-size: 20px;  /* বার্তা বড় করার জন্য */
+            font-size: 22px;  /* বার্তা বড় করার জন্য */
         }
 
         .popup-content ol {
             text-align: left;
             margin-left: 20px;
-            font-size: 18px;
+            font-size: 20px;
         }
 
         #closePopup {
@@ -66,9 +83,14 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             transition: background-color 0.3s;
+        }
+
+        #closePopup:disabled {
+            background-color: #d3d3d3;  /* নিষ্ক্রিয় বাটনের জন্য */
+            cursor: not-allowed;
         }
 
         #closePopup:hover {
@@ -91,9 +113,12 @@
             }
         }
 
-        /* পপআপের উপর টেক্সট স্টাইলিং */
-        .popup-content p, .popup-content ol {
-            color: #fff; /* সাদা রঙে টেক্সট */
+        /* টাইমার টেক্সট */
+        #timerDisplay {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: normal;
+            color: #fff;
         }
     </style>
 </head>
@@ -107,6 +132,7 @@
                 <li>টেলিগ্রামে আমরা প্যানেল কিভাবে সেট আপ করতে হয় সে ভিডিওর লিংক দিয়ে দিব</li>
                 <li>আপনার সে ভিডিওটি দেখে ডাউনলোড করে গেম খেলতে পারবেন</li>
             </ol>
+            <div id="timerDisplay">পপআপ বন্ধ হবে 10 সেকেন্ডে।</div>
             <button id="closePopup">ওকে</button>
         </div>
     </div>
