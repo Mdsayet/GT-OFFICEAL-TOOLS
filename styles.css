@@ -21,30 +21,28 @@ body {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo Styling with Border */
-.platform-logo {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-    border: 2px solid black; /* Black border around the logos */
-    border-radius: 50%;
-    padding: 5px;
+/* Company Logo Styling */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Welcome Message with Border */
+.logo {
+    width: 150px; /* Set the logo size */
+    height: 150px;
+    border: 5px solid black; /* Border around the logo */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* Welcome Message */
 .welcome {
     font-size: 3em;
     color: black;
     margin: 10px 0;
     font-weight: bold;
     letter-spacing: 2px;
-    padding: 10px;
-    border: 5px solid black;
-    border-radius: 10px;
-    background-color: #f4f4f4;
 }
 
-/* Subtitle */
 .subtitle {
     font-size: 2em;
     color: #333;
@@ -60,14 +58,13 @@ body {
     width: 90%;
 }
 
-/* Buttons with Platform Logos */
+/* Buttons */
 .button-container {
     margin-top: 30px;
 }
 
 .button {
-    display: flex;
-    align-items: center;
+    display: block;
     background-color: red;
     color: black;
     border: 2px solid black;
@@ -78,7 +75,7 @@ body {
     border-radius: 30px;
     text-align: center;
     width: 80%;
-    max-width: 250px;
+    max-width: 200px;
     transition: all 0.3s ease-in-out;
     font-weight: bold;
 }
@@ -88,50 +85,26 @@ body {
     color: white;
 }
 
-/* Platform Logo Styling */
-.platform-logo {
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
-}
-
-/* Specific Button Color */
-.youtube {
-    background-color: #ff0000;
-}
-
-.telegram {
-    background-color: #0088cc;
-}
-
-.whatsapp {
-    background-color: #25d366;
-}
-
 /* Phone Button */
 .phone-button {
-    display: inline-block;
-    background-color: #128c7e; /* WhatsApp green */
+    display: block;
+    background-color: green;
     color: white;
-    font-size: 1.4em;
-    padding: 15px 25px;
-    border-radius: 50px;
-    width: 150px;
+    border: 2px solid black;
+    padding: 15px 20px;
+    margin: 10px auto;
+    font-size: 1.2em;
+    border-radius: 50%;
     text-align: center;
-    line-height: 1.5;
-    text-decoration: none;
-    margin-top: 30px;
-    transition: background-color 0.3s;
+    width: 80%;
+    max-width: 150px;
+    transition: all 0.3s ease-in-out;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .phone-button:hover {
-    background-color: #075e54; /* Darker green on hover */
-}
-
-.phone-icon {
-    font-size: 1.6em;
-    margin-right: 10px;
+    background-color: darkgreen;
 }
 
 /* Responsive */
