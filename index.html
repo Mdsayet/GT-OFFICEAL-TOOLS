@@ -10,6 +10,7 @@
             // পপআপ মেসেজ দেখানোর জন্য
             var popup = document.getElementById('popup');
             popup.style.display = 'flex';
+            popup.classList.add('popup-animation');  // এনিমেশন ক্লাস যোগ করা
 
             // ওকে বাটন ক্লিক করলে পপআপ বন্ধ হবে
             document.getElementById('closePopup').onclick = function() {
@@ -26,7 +27,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);  /* একটু গা dark background */
+            background: rgba(0, 0, 0, 0.8); /* কালো ব্যাকগ্রাউন্ড */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -34,25 +35,27 @@
         }
 
         .popup-content {
-            background: #222;
+            background: linear-gradient(135deg, #ff6f61, #ffcc00); /* গ্র্যাডিয়েন্ট ব্যাকগ্রাউন্ড */
             padding: 25px;
-            border-radius: 10px;
+            border-radius: 20px;
             text-align: center;
             width: 80%;
             max-width: 500px;
             color: #fff;
             font-family: 'Arial', sans-serif;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.6;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* শ্যাডো এফেক্ট */
         }
 
         .popup-content p {
-            font-size: 18px;  /* বার্তা বড় করার জন্য */
+            font-size: 20px;  /* বার্তা বড় করার জন্য */
         }
 
         .popup-content ol {
             text-align: left;
             margin-left: 20px;
+            font-size: 18px;
         }
 
         #closePopup {
@@ -65,10 +68,32 @@
             cursor: pointer;
             font-size: 18px;
             font-weight: bold;
+            transition: background-color 0.3s;
         }
 
         #closePopup:hover {
             background-color: #45a049;
+        }
+
+        /* পপআপ এনিমেশন */
+        .popup-animation {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* পপআপের উপর টেক্সট স্টাইলিং */
+        .popup-content p, .popup-content ol {
+            color: #fff; /* সাদা রঙে টেক্সট */
         }
     </style>
 </head>
