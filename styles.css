@@ -21,17 +21,17 @@ body {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Company Logo Styling */
+/* Logo */
 .logo-container {
     text-align: center;
     margin-bottom: 20px;
 }
 
 .logo {
-    width: 150px; /* Set the logo size */
+    width: 150px;
     height: 150px;
-    border: 5px solid black; /* Border around the logo */
-    border-radius: 10px; /* Optional: rounded corners */
+    border: 5px solid black;
+    border-radius: 10px;
 }
 
 /* Welcome Message */
@@ -50,7 +50,7 @@ body {
     font-weight: bold;
 }
 
-/* Divider Line */
+/* Divider */
 .divider {
     height: 2px;
     background-color: black;
@@ -65,9 +65,7 @@ body {
 
 .button {
     display: block;
-    background-color: red;
-    color: black;
-    border: 2px solid black;
+    color: white;
     text-decoration: none;
     padding: 15px 20px;
     margin: 10px auto;
@@ -76,13 +74,29 @@ body {
     text-align: center;
     width: 80%;
     max-width: 200px;
-    transition: all 0.3s ease-in-out;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.button.telegram {
+    background-color: #0088cc;
+}
+
+.button.youtube {
+    background-color: #ff0000;
+}
+
+.button.whatsapp {
+    background-color: #25D366;
+}
+
+.button.download {
+    background-color: #ffcc00;
+    color: black;
 }
 
 .button:hover {
-    background-color: darkred;
-    color: white;
+    opacity: 0.9;
 }
 
 /* Phone Button */
@@ -98,7 +112,6 @@ body {
     text-align: center;
     width: 80%;
     max-width: 150px;
-    transition: all 0.3s ease-in-out;
     font-weight: bold;
     text-decoration: none;
 }
@@ -107,15 +120,44 @@ body {
     background-color: darkgreen;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    .welcome {
-        font-size: 2.5em;
-    }
-    .subtitle {
-        font-size: 1.8em;
-    }
-    .button {
-        font-size: 1em;
-    }
+/* Popup */
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: linear-gradient(135deg, #ff6f61, #ffcc00);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.8;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#closePopup {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#closePopup:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
 }
